@@ -1,0 +1,25 @@
+﻿@model List<WebApplication10.Models.Question>
+
+@{
+    ViewData["Title"] = "Тест";
+}
+
+<h2>Тест</h2>
+
+<form asp-action="SubmitAnswers" method="post">
+    @for (int i = 0; i < Model.Count; i++)
+    {
+        <div>
+            <h3>@Model[i].Text</h3>
+            @for (int j = 0; j < Model[i].Answers.Count; j++)
+            {
+                <div>
+                    <input type="radio" id="question-@i-answer-@j" name="selectedAnswers[@i]" value="@j" required />
+                    <label for="question-@i-answer-@j">@Model[i].Answers[j]</label>
+                </div>
+            }
+        </div>
+    }
+    <button type="submit">Отправить ответы</button>
+</form>
+

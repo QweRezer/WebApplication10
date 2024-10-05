@@ -1,0 +1,28 @@
+﻿@using WebApplication10.Models
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/style.css" />
+<link rel="stylesheet" asp-href-include="~/css/*.css" />
+
+
+
+
+<button id="alertButton" class="button">Нажми</button>
+
+
+<body>
+    <div class="container">
+        <h1>Welcome!</h1>
+    </div>
+
+   
+    <script src="~/js/jquery.min.js"></script>
+    <script src="~/js/bootstrap.bundle.min.js"></script>
+    <script asp-src-include="~/js/*.js"></script>
+</body>
+
